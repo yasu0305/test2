@@ -8,13 +8,13 @@
 class DigitalClock : public QLCDNumber
 {
 
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    DigitalClock(QWidget *parent = nullptr);
+  DigitalClock(QWidget *parent = nullptr);
 
 private slots:
-    void showTime();
+  void showTime();
 
 };
 

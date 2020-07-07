@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QtWidgets>
+#include "digitalclock.h"
+#include "dispdatetime.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,6 +28,8 @@ private slots:
 
 
   void on_lineEdit_returnPressed();
+
+  void on_pushButton_4_clicked();
 
 private:
   Ui::MainWindow *ui;

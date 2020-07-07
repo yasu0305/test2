@@ -61,9 +61,9 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::disp_date_time()
 {
 
-  QDateTime dt=QDateTime::currentDateTime();
+  QDateTime dt = QDateTime::currentDateTime();
 
-  ui->label_date_time->setText(dt.toString("yyyy/MM/dd hh:mm:ss"));
+  //ui->label_date_time->setText(dt.toString("yyyy/MM/dd hh:mm:ss"));
 
 }
 
@@ -130,5 +130,14 @@ void MainWindow::on_lineEdit_returnPressed()
   ui->tableWidget->resizeColumnsToContents();
   //ui->tableWidget->setVisible(true);
   ui->tableWidget->setSortingEnabled(true);
+
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+
+  QLabel *dd = new DispDateTime(this);
+  connect(this,SIGNAL(on_pushButton_4_clicked()),dd,SLOT(dd.showTime));
+
 
 }

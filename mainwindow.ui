@@ -115,8 +115,8 @@
    <widget class="DigitalClock" name="lcdNumber">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>20</y>
+      <x>540</x>
+      <y>60</y>
       <width>100</width>
       <height>50</height>
      </rect>
@@ -152,12 +152,44 @@
      <number>0</number>
     </property>
    </widget>
+   <widget class="DispDateTime" name="label_date_time">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>10</y>
+      <width>127</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string>Date Time</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>70</y>
+      <width>112</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>11</x>
       <y>10</y>
-      <width>411</width>
+      <width>361</width>
       <height>32</height>
      </rect>
     </property>
@@ -173,19 +205,6 @@
       <widget class="QLabel" name="label">
        <property name="text">
         <string>TextLabel</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_date_time">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Date Time</string>
        </property>
       </widget>
      </item>
@@ -227,6 +246,11 @@
    <class>DigitalClock</class>
    <extends>QLCDNumber</extends>
    <header location="global">digitalclock.h</header>
+  </customwidget>
+  <customwidget>
+   <class>DispDateTime</class>
+   <extends>QLabel</extends>
+   <header location="global">dispdatetime.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
