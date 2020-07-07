@@ -5,6 +5,7 @@
 
 
 
+
 DigitalClock::DigitalClock(QWidget *parent)
     : QLCDNumber(parent)
 {
