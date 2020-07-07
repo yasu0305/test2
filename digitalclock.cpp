@@ -3,6 +3,8 @@
 #include <QTime>
 #include <QTimer>
 
+
+
 DigitalClock::DigitalClock(QWidget *parent)
     : QLCDNumber(parent)
 {
