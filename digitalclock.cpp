@@ -1,17 +1,10 @@
 #include "digitalclock.h"
 
-#include <QTime>
-#include <QTimer>
-
-
-
-
 DigitalClock::DigitalClock(QWidget *parent)
     : QLCDNumber(parent)
 {
 
     QTimer *timer = new QTimer(this);
-
 
     connect(timer, &QTimer::timeout, this, &DigitalClock::showTime);
     timer->start(1000);
@@ -33,4 +26,3 @@ void DigitalClock::showTime()
     display(text);
 
 }
-

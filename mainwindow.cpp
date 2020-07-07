@@ -1,16 +1,18 @@
 #include <random>
 
-void gen_random(char *s, const int len) {
-    static const char alphanum[] =
-        "0123456789"
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        "abcdefghijklmnopqrstuvwxyz";
+void gen_random(char *s, const int len)
+{
 
-    for (int i = 0; i < len; ++i) {
-        s[i] = alphanum[std::rand() % (sizeof(alphanum) - 1)];
-    }
+  static const char alphanum[] =
+      "0123456789"
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      "abcdefghijklmnopqrstuvwxyz";
 
-    s[len] = 0;
+  for (int i = 0; i < len; ++i)
+    s[i] = alphanum[std::rand() % (sizeof(alphanum) - 1)];
+
+  s[len] = 0;
+
 }
 
 
@@ -45,40 +47,51 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+
   int ret = QMessageBox::question( this, tr("title"), tr("test") );
 
   if( ret == QMessageBox::Yes )
     ui->label->setText("Yes");
   else
     ui->label->setText("No");
+
 }
 
 
 void MainWindow::disp_date_time()
 {
+
   QDateTime dt=QDateTime::currentDateTime();
 
   ui->label_date_time->setText(dt.toString("yyyy/MM/dd hh:mm:ss"));
+
 }
+
 
 void MainWindow::disp_text_browser()
 {
+
   static int i=0;
 
   ui->textBrowser->setText(QString::number(i++));
+
 }
 
 
 void MainWindow::on_pushButton_2_clicked()
 {
+
   if(!timer2->isActive())
     timer2->start();
+
 }
 
 
 void MainWindow::on_pushButton_3_clicked()
 {
-  timer2->stop();
+  if(timer2->isActive())
+    timer2->stop();
+
 }
 
 
@@ -119,4 +132,3 @@ void MainWindow::on_lineEdit_returnPressed()
   ui->tableWidget->setSortingEnabled(true);
 
 }
-
