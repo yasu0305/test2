@@ -10,7 +10,6 @@ DigitalClock::DigitalClock(QWidget *parent)
     QTimer *timer = new QTimer(this);
 
 
-
     connect(timer, &QTimer::timeout, this, &DigitalClock::showTime);
     timer->start(1000);
 
