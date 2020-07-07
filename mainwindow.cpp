@@ -29,12 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
 
   timer = new QTimer(this);
   timer->setInterval(1000);
-  connect(timer,SIGNAL(timeout()),SLOT(disp_date_time()));
-  timer->start();
-
-  timer2 = new QTimer(this);
-  timer2->setInterval(1000);
-  connect(timer2,SIGNAL(timeout()),SLOT(disp_text_browser()));
+  connect(timer, SIGNAL(timeout()), SLOT(disp_text_browser()));
 
 }
 
@@ -58,16 +53,6 @@ void MainWindow::on_pushButton_clicked()
 }
 
 
-void MainWindow::disp_date_time()
-{
-
-  QDateTime dt = QDateTime::currentDateTime();
-
-  //ui->label_date_time->setText(dt.toString("yyyy/MM/dd hh:mm:ss"));
-
-}
-
-
 void MainWindow::disp_text_browser()
 {
 
@@ -81,16 +66,16 @@ void MainWindow::disp_text_browser()
 void MainWindow::on_pushButton_2_clicked()
 {
 
-  if(!timer2->isActive())
-    timer2->start();
+  if(!timer->isActive())
+    timer->start();
 
 }
 
 
 void MainWindow::on_pushButton_3_clicked()
 {
-  if(timer2->isActive())
-    timer2->stop();
+
+    timer->stop();
 
 }
 
@@ -130,14 +115,5 @@ void MainWindow::on_lineEdit_returnPressed()
   ui->tableWidget->resizeColumnsToContents();
   //ui->tableWidget->setVisible(true);
   ui->tableWidget->setSortingEnabled(true);
-
-}
-
-void MainWindow::on_pushButton_4_clicked()
-{
-
-  QLabel *dd = new DispDateTime(this);
-  connect(this,SIGNAL(on_pushButton_4_clicked()),dd,SLOT(dd.showTime));
-
 
 }

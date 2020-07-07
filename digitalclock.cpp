@@ -9,7 +9,6 @@ DigitalClock::DigitalClock(QWidget *parent)
   connect(timer, &QTimer::timeout, this, &DigitalClock::showTime);
   timer->start(1000);
 
-
 }
 
 

@@ -11,12 +11,15 @@ class DispDateTime : public QLabel
   Q_OBJECT
 
 public:
-  explicit DispDateTime(QWidget *parent = nullptr);
+  DispDateTime(QWidget *parent = nullptr);
 
 public slots:
   void showTime();
+
 private slots:
 
+signals:
+  void valueChanged();
 
 };
 

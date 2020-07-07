@@ -6,8 +6,8 @@ DispDateTime::DispDateTime(QWidget *parent)
 
   QTimer *timer = new QTimer(this);
 
-//  connect(timer, &QTimer::timeout, this, &DispDateTime::showTime);
-//  timer->start(1000);
+  connect(timer, &QTimer::timeout, this, &DispDateTime::showTime);
+  timer->start(1000);
 
 }
 
