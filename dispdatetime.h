@@ -16,11 +16,6 @@ public:
 public slots:
   void showTime();
 
-private slots:
-
-signals:
-  void valueChanged();
-
 };
 
 #endif
