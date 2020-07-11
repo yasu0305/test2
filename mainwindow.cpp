@@ -123,7 +123,7 @@ void MainWindow::on_lineEdit_textChanged(const QString &arg1)
     for(int i=0; i<ui->tableWidget->rowCount(); i++){
         ui->tableWidget->hideRow(i);
         for(int j=0; j<ui->tableWidget->columnCount(); j++){
-            if(ui->tableWidget->item(i, j)->text().contains(arg1))
+            if(ui->tableWidget->item(i, j)->text().contains(arg1, Qt::CaseInsensitive))
                 ui->tableWidget->showRow(i);
         }
     }
