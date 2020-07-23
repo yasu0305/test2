@@ -16,7 +16,6 @@ void gen_random(char *s, const int len)
 }
 
 
-
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
