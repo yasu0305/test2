@@ -13,7 +13,7 @@ class DispDateTime : public QLabel
 public:
   DispDateTime(QWidget *parent = nullptr);
 
-public slots:
+private slots:
   void showTime();
 
 };
