@@ -9,5 +9,5 @@ test::test()
 
 void test::on_pushButton_4_clicked()
 {
-    ui->label->setText("abc");
+    ui->label->setText("abcd");
 }
